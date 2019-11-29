@@ -9,9 +9,12 @@ export class AppComponent {
   important = true;
   dangerous = false;
 
-  componentClasses = {
-    show: this.loaded,
-    warning: this.important && this.dangerous
-  };
-
+  ingredients = [
+    "avocado",
+    "pomodoro",
+    "lattuga",
+    "maionese",
+    "pancetta",
+    "pane"
+  ];
 }

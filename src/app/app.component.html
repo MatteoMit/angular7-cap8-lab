@@ -1,3 +1,7 @@
-<div [ngClass]="['warning', 'show']">
-	Messaggio importante
-</div>
+<p >
+	Prodotti nel carrello:
+</p>
+
+<ul>
+<li *ngFor="let ingredient of ingredients">{{ ingredient }}</li>
+</ul>
