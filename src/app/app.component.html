@@ -1,7 +1,14 @@
-<p >
+<p>
 	Prodotti nel carrello:
 </p>
 
 <ul>
-<li *ngFor="let ingredient of ingredients">{{ ingredient }}</li>
+	<li *ngFor="let ingredient of ingredients;
+let i = index;
+let even = even;
+let odd = odd" [ngClass]="{ even: even, odd: odd }">
+		{{ i }}. {{ ingredient | titlecase }}
+		<button class="delete"
+(click)="delete(ingredient)">Rimuovi</button>
+	</li>
 </ul>

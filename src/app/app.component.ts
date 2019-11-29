@@ -5,10 +5,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  loaded = true;
-  important = true;
-  dangerous = false;
-
   ingredients = [
     "avocado",
     "pomodoro",
@@ -17,4 +13,9 @@ export class AppComponent {
     "pancetta",
     "pane"
   ];
+  delete(item: string) {
+    this.ingredients = this.ingredients.filter(
+      ingredient => ingredient !== item
+    );
+  }
 }
